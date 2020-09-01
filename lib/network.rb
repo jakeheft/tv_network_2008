@@ -13,9 +13,8 @@ class Network
   def main_characters
     network_main_characters = []
     @shows.each do |show|
-      # require "pry"; binding.pry
       if show.main_characters != []
-        network_main_characters << show.main_characters
+        network_main_characters << show.main_characters.pop
       end
     end.flatten
     network_main_characters

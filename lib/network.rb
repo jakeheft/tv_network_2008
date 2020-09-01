@@ -28,4 +28,16 @@ class Network
     actors_in_show
   end
 
+  def shows_by_actor
+    shows_sorted_by_actor = {}
+    @shows.each do |show|
+      show.actors.each do |actor|
+        if show.actors.include?(actor)
+          shows_sorted_by_actor[actor] = show
+        end
+      end
+    end
+    shows_sorted_by_actor
+  end
+
 end
